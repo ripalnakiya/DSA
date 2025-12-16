@@ -9,6 +9,7 @@ $   Selection Sort Algorithm
 
 #   Time Complexity:
         Best / Average / Worst: O(n^2)
+
 #   Space Complexity:
         O(1) (in-place)
 */
@@ -36,7 +37,7 @@ void selectionSort(int arr[], int n)
         }
     }
 }
-
+ 
 void printArray(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
