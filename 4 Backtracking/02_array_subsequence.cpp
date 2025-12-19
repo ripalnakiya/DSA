@@ -22,9 +22,9 @@ void printSubsequence(int index, vector<int> &store, vector<int> &arr)
     //! take the element, therefore adding it in store
     store.push_back(arr[index]);
     printSubsequence(index + 1, store, arr);
-    store.pop_back();
 
     //! do not take the element
+    store.pop_back();
     printSubsequence(index + 1, store, arr);
 }
 
