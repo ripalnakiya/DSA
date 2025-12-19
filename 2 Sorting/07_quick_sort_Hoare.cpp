@@ -11,8 +11,8 @@ $   Hoare Partition Scheme
     - DOES NOT guarantee pivot ends up in its final position
 
 #   Returns an index 'partitionIndex' such that:
-        * arr[lowIndex .. partitionIndex]  <= pivot
-        * arr[partitionIndex+1 .. highIndex] >= pivot
+        [low .. partitionIndex]      <= pivot
+        [partitionIndex+1 .. high]   >= pivot
 */
 
 int hoarePartition(int *arr, int low, int high)
@@ -42,8 +42,6 @@ int hoarePartition(int *arr, int low, int high)
 }
 
 /*
-    Quick Sort using Hoare Partition
-    --------------------------------
     Note the recursive calls:
     - Pivot is NOT at its final position
     - So recursion includes partitionIndex

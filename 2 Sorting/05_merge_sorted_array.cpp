@@ -21,7 +21,7 @@ void merge(int *arrA, int sizeA, int *arrB, int sizeB, int *arr, int i, int j, i
         return;
     }
 
-    if (arrA[i] < arrB[j])
+    if (arrA[i] <= arrB[j])
     {
         arr[k] = arrA[i];
         merge(arrA, sizeA, arrB, sizeB, arr, i + 1, j, k + 1);

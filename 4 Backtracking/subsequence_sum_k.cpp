@@ -1,6 +1,7 @@
-//$ Program to find all the subsequences with sum k
 #include <bits/stdc++.h>
 using namespace std;
+
+//$ Program to find all the subsequences with sum k
 
 void subsequences(int index, int sum, int k, vector<int> &ds, vector<int> &arr)
 {
