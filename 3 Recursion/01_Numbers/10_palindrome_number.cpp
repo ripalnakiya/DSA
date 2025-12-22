@@ -11,7 +11,7 @@ using namespace std;
    - While recursion UNWINDS, compare with RIGHTMOST digit.
    - We maintain `rightPart` which keeps shrinking from the right side.
 */
-bool checkRec(int leftPart, int &rightPart) {
+bool checkRec(int leftPart, int &rightPart) { 
 
     //! Base case: if leftPart becomes 0, we've checked all digits
     if (leftPart == 0)

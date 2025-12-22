@@ -1,6 +1,7 @@
-//$ Program to find all the unique subsets of an array
 #include <bits/stdc++.h>
 using namespace std;
+
+//$ Program to find all the unique subsets of an array
 
 void findSubsets(int index, vector<int> &ds, vector<vector<int>> &answer, vector<int> &arr)
 {

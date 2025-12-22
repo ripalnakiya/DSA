@@ -1,6 +1,7 @@
-//$ Program to find sum of each subset of an array
 #include <bits/stdc++.h>
 using namespace std;
+
+//$ Program to find sum of each subset of an array
 
 void subsetSum(int index, int sum, vector<int> &solution, vector<int> &arr)
 {
