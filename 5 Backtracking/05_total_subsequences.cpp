@@ -16,6 +16,7 @@ int subsequences(int index, int &sum, vector<int> &list, int &k)
     int left = subsequences(index + 1, sum, list, k);
 
     sum -= list[index];
+    
     int right = subsequences(index + 1, sum, list ,k);
 
     return left + right;

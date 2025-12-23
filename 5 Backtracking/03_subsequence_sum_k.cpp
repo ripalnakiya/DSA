@@ -24,6 +24,7 @@ void subsequences(int index, vector<int> &store, int &sum, vector<int> &list, in
     
     sum -= list[index];
     store.pop_back();
+    
     subsequences(index + 1, store, sum, list, k);
 }
 

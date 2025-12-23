@@ -24,7 +24,9 @@ void printSubsequence(int index, vector<int> &store, vector<int> &arr)
     printSubsequence(index + 1, store, arr);
 
     //! do not take the element
+    //$ Backtrack - Undo the previous changes
     store.pop_back();
+
     printSubsequence(index + 1, store, arr);
 }
 
