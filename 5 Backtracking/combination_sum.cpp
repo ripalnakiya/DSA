@@ -1,7 +1,7 @@
 /*
 $ LeetCode: 39
 
-Given an array of distinct integers candidates and a target integer,
+Given an array of distinct unsorted integers candidates and a target integer,
 return a list of all unique combinations of candidates where the chosen numbers sum to target.
 You may return the combinations in any order.
 
@@ -28,12 +28,15 @@ using namespace std;
 
 void findCombination(int index, int target, vector<int> &store, vector<vector<int>> &result, vector<int> &candidates)
 {
-    if (index >= candidates.size())
+    // base case
+    if (target == 0)
     {
-        if (target == 0)
-            result.push_back(store);
+        result.push_back(store);
         return;
     }
+
+    if (index >= candidates.size())
+        return;
 
     //# Pick the element if it is less than target
     if (candidates[index] <= target)
@@ -51,12 +54,13 @@ void findCombination(int index, int target, vector<int> &store, vector<vector<in
     //# Not pick the element, hence going for next index and not reducing it from target
     findCombination(index + 1, target, store, result, candidates);
 }
-//$ Time Complexity = O(2^target * k)
-// k for copying the elements from ds to answer
+//$ Time Complexity = O(2^n * k)
+// n is size of candidates
+// k for copying the elements from store to result
 
 int main()
 {
-    vector<int> candidates = {2, 3, 6, 7};
+    vector<int> candidates = {2, 6, 3, 7};
     vector<int> store;
     vector<vector<int>> result;
     int target = 7;
