@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 /*
 $ String                = "abc"
 
@@ -18,30 +15,3 @@ $ String                = "abc"
 @ Hence, all sub-sequences are sub-sets. 
 @ And we can print all sub-sequnces even If we're asked to print all subsets.
 */
-
-void printSubsets(string ip, string op)
-{
-    if (ip.length() == 0)
-    {
-        cout << op << " ";
-        return;
-    }
-
-    //$ Generate two output templates
-    string op1 = op;
-    string op2 = op;
-
-    //$ Make the decision
-    op2.push_back(ip[0]);
-    ip.erase(ip.begin() + 0);
-
-    //$ Make further recursive calls
-    printSubsets(ip, op1);
-    printSubsets(ip, op2);
-}
-
-int main()
-{
-    string str = "ab";
-    printSubsets(str, "");
-}
