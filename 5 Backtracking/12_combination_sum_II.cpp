@@ -7,9 +7,8 @@ find all unique combinations in candidates where the candidate numbers sum to ta
 Each number in candidates may only be used once in the combination.
 
 Note: The solution set must not contain duplicate combinations.
-*/
 
-/*
+$ Example 1:
 # Input: candidates = [10,1,2,7,6,1,5], target = 8
 # Output:
 [
@@ -18,9 +17,8 @@ Note: The solution set must not contain duplicate combinations.
 [1,7],
 [2,6]
 ]
-*/
 
-/*
+$ Example 2:
 # Input: candidates = [1,1,1,2,2] , target = 4
 # Output: [[1,1,2], [2,2]]
 ~ We cannot have solution [1,2,1] because after sorting it, we'll get a duplicate combination

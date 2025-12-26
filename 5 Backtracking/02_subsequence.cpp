@@ -1,11 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//$ Program to print all the subsequences
-// Input: {3, 1, 2}
-// Output: {3 1 2}, {3 1}, {3 2}, {3}, {1 2}, {1}, {2}, {}
-// Subsequences follow the sequence of elements as originally present in arary.
-// Hence, {1 2 3} is not a sub sequence. 
+/*
+$ Program to print all the subsequences
+
+Input: {3, 1, 2}
+Output: {3 1 2}, {3 1}, {3 2}, {3}, {1 2}, {1}, {2}, {}
+Subsequences follow the sequence of elements as originally present in arary.
+Hence, {1 2 3} is not a sub sequence.
+*/
 
 void printSubsequence(int index, vector<int> &store, vector<int> &arr)
 {
