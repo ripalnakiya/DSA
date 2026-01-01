@@ -1,27 +1,54 @@
+/*
+$ LeetCode: 46
+Given an array nums of distinct integers, return all the possible permutations.
+You can return the answer in any order.
+All the integers of nums are unique.
+
+$ Example 1:
+# Input: nums = [1,2,3]
+# Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+
+$ Example 2:
+# Input: nums = [0,1]
+# Output: [[0,1],[1,0]]
+
+$ Example 3:
+# Input: nums = [1]
+# Output: [[1]]
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
-void makePermutations(int index, vector<vector<int>> &result, vector<int> &nums)
+void makePermutations(vector<bool> &used, vector<int> &store, vector<vector<int>> &result, vector<int> &nums)
 {
-    if (index == nums.size())
+    if (store.size() == nums.size())
     {
-        result.push_back(nums);
+        result.push_back(store);
         return;
     }
 
-    // each element replaces itself with index 0: [1,2,3] : (1,2,3) (2,1,3) (3,2,1)
-    for (int i = index; i < nums.size(); i++)
+    for (int i = 0; i < nums.size(); i++)
     {
-        swap(nums[index], nums[i]);
-        makePermutations(index + 1, result, nums);
-        swap(nums[index], nums[i]);
+        if (used[i])
+            continue;
+
+        store.push_back(nums[i]);
+        used[i] = true;
+        // `used` vector is there to reduce the input size, we don't need index+1 etc.
+        makePermutations(used, store, result, nums);
+        used[i] = false;
+        store.pop_back();
     }
 }
+//~ This approach uses extra vector, which add to the space complexity of program.
 
 vector<vector<int>> permute(vector<int> &nums)
 {
+    vector<int> store;
     vector<vector<int>> result;
-    makePermutations(0, result, nums);
+    vector<bool> used(nums.size(), false);
+    makePermutations(used, store, result, nums);
     return result;
 }
 

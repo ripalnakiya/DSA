@@ -5,6 +5,8 @@ $ 1593. Split a String Into the Max Number of Unique Substrings
 #include <bits/stdc++.h>
 using namespace std;
 
+// We have made sure that we don't use greedy approach, and explore all possible options
+
 void findSubStrings(int index, int count, int &maximum, set<string> &hash, string &s)
 {
     // Prune: If the current count plus remaining characters can't exceed maximum, return
