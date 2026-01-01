@@ -1,0 +1,1 @@
+// We use hashing technique here to make the isValid() perform faster
