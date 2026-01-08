@@ -26,10 +26,8 @@ Let's have two pointers at both ends of array,
 And use merge sort technique of merging two sorted arrays, into one array.
 
 Since we'll be mergeing two decreasing arrays,
-we'll start including the elements in new array from last it's index (That way last index will have larger element)
-And resultant array will be properly sorted.
-
-We can take reference from "Two Pointers / Basic / Merge Sorted Arrays" solution
+we'll start including the elements in new array from last index (That way last index will have larger element)
+Hence resultant new array will be properly sorted.
 */
 
 #include <bits/stdc++.h>
